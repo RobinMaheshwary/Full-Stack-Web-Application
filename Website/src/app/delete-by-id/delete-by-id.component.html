@@ -1,0 +1,37 @@
+
+  <!-- Home component -->
+  <nav>
+    <div >
+      <a  routerLink="/home">Car Invantory Management</a>
+          <ul >
+            <a  routerLink="/show-data">Get All Cars</a>
+          </ul>
+          <ul >
+            <a  routerLink="/getcarbyid">Get Car By ID</a>
+          </ul>
+          <ul >
+            <a  routerLink="/deletebyid">Delete Car By ID</a>
+          </ul>
+          <ul>
+            <a routerLink="/top">Get Top N Cars</a>
+          </ul>
+          <ul >
+            <a routerLink="/updatebyid">Update Car</a>
+          </ul>
+    </div>
+  </nav>
+
+<div style="text-align: center">
+  
+    <button (click)="goHome()">go back</button>
+<h1> Delete Car By Id</h1>
+
+<!-- Input for top N cars-->
+    <div>
+      <input [(ngModel)]="carId" type="number" placeholder="Enter Car Id" />
+      <button (click)="deleteCarById()">Delete Car by ID</button> 
+    </div>
+
+
+
+</div>

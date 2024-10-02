@@ -1,0 +1,88 @@
+<nav>
+  <div >
+    <a  routerLink="/home">Car Invantory Management</a>
+        <ul >
+          <a  routerLink="/show-data">Get All Cars</a>
+        </ul>
+        <ul >
+          <a  routerLink="/getcarbyid">Get Car By ID</a>
+        </ul>
+        <ul >
+          <a  routerLink="/deletebyid">Delete Car By ID</a>
+        </ul>
+        <ul>
+          <a routerLink="/top">Get Top N Cars</a>
+        </ul>
+        <ul >
+          <a routerLink="/updatebyid">Update Car</a>
+        </ul>
+  </div>
+</nav>
+
+<div style="text-align: center">
+
+    <button (click)="goHome()">go back</button>
+  
+    <!-- Input for car ID
+    <div>
+      <input [(ngModel)]="carId" type="number" placeholder="Enter Car ID" />
+      <button (click)="fetchCarById()">Get Car by ID</button>
+      <!-- <button (click)="deleteCarById()">Delete Car by ID</button> 
+    </div> -->
+  
+    <!-- Display fetched car 
+    <div *ngIf="car">
+      <h3>Car Details</h3>
+      <p><strong>Name:</strong> {{ car.name }}</p>
+      <p><strong>Year:</strong> {{ car.year }}</p>
+      <p><strong>Selling Price:</strong> {{ car.sellingPrice }}</p>
+      <p><strong>KM Driven:</strong> {{ car.kmDriver }}</p>
+      <p><strong>Fuel:</strong> {{ car.fuel }}</p>
+      <p><strong>Seller Type:</strong> {{ car.sellerType }}</p>
+      <p><strong>Transmission:</strong> {{ car.transmission }}</p>
+      <p><strong>Owner:</strong> {{ car.owner }}</p>
+    </div>
+  
+    Form to update car details
+    <div *ngIf="car">
+      <h3>Update Car</h3>
+      <input [(ngModel)]="updateCar.name" placeholder="Name" />
+      <input [(ngModel)]="updateCar.year" placeholder="Year" type="number" />
+      <input [(ngModel)]="updateCar.sellingPrice" placeholder="Selling Price" type="number" />
+      <input [(ngModel)]="updateCar.kmDriver" placeholder="KM Driven" type="number" />
+      <input [(ngModel)]="updateCar.fuel" placeholder="Fuel" />
+      <input [(ngModel)]="updateCar.sellerType" placeholder="Seller Type" />
+      <input [(ngModel)]="updateCar.transmission" placeholder="Transmission" />
+      <input [(ngModel)]="updateCar.owner" placeholder="Owner" />
+      <button (click)="updateCarById()">Update Car</button>
+    </div> -->
+  
+    <!-- Button to fetch all cars -->
+    <div>
+      <button (click)="fetchAllCars()">Get All Cars</button>
+    </div>
+  
+    <!-- Display all cars -->
+    <div *ngIf="cars.length">
+      <h3>All Cars</h3>
+      <ul>
+        <li *ngFor="let car of cars">{{ car.name }} - {{ car.year }}</li>
+      </ul>
+    </div>
+  
+    <!-- Input for top N cars-->
+    <!-- <div>
+      <input [(ngModel)]="n" type="number" placeholder="Enter N" />
+      <button (click)="fetchTopNCars()">Get Top N Cars</button>
+    </div> -->
+  
+    <!-- Display top N cars -->
+    <!-- <div *ngIf="topCars.length">
+      <h3>Top {{ n }} Cars</h3>
+      <ul>
+        <li *ngFor="let car of topCars">{{ car.name }} - {{ car.year }}</li>
+      </ul>
+    </div>
+  </div>  -->
+  
+  

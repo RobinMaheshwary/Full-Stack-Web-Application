@@ -1,0 +1,64 @@
+<nav>
+  <div >
+    <a  routerLink="/home">Car Invantory Management</a>
+        <ul >
+          <a  routerLink="/show-data">Get All Cars</a>
+        </ul>
+        <ul >
+          <a  routerLink="/getcarbyid">Get Car By ID</a>
+        </ul>
+        <ul >
+          <a  routerLink="/deletebyid">Delete Car By ID</a>
+        </ul>
+        <ul>
+          <a routerLink="/top">Get Top N Cars</a>
+        </ul>
+        <ul >
+          <a routerLink="/updatebyid">Update Car</a>
+        </ul>
+  </div>
+</nav>
+
+<div style="text-align: center">
+
+  <button (click)="goHome()">Go Back</button>
+
+  <!-- Form to get car by ID -->
+  <input [(ngModel)]="carId" type="number" placeholder="Enter Car ID" />
+  <button (click)="fetchCarById()">Get Car by ID</button>
+
+  <!-- Conditional rendering: Display message if car is not found or show form to update car if found -->
+  <div *ngIf="car; else errorTemplate">
+    <!-- Update form if car is found -->
+    <p>
+      <strong>
+        Car is present
+      </strong>
+    </p>
+    <h1>Update Car Details</h1>
+    <h3>Update Car</h3>
+
+    <input [(ngModel)]="updateCar.name" placeholder="Name" />
+    <input [(ngModel)]="updateCar.year" placeholder="Year" type="number" />
+    <input
+      [(ngModel)]="updateCar.sellingPrice"
+      placeholder="Selling Price"
+      type="number"
+    />
+    <input
+      [(ngModel)]="updateCar.kmDriver"
+      placeholder="KM Driven"
+      type="number"
+    />
+    <input [(ngModel)]="updateCar.fuel" placeholder="Fuel" />
+    <input [(ngModel)]="updateCar.sellerType" placeholder="Seller Type" />
+    <input [(ngModel)]="updateCar.transmission" placeholder="Transmission" />
+    <input [(ngModel)]="updateCar.owner" placeholder="Owner" />
+    <button (click)="updateCarById()">Update Car</button>
+  </div>
+
+  <!-- Error template: Displayed if car is not found -->
+  <ng-template #errorTemplate>
+    <p>No car found with the provided ID.</p>
+  </ng-template>
+</div>

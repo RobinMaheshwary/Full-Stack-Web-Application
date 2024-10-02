@@ -1,0 +1,118 @@
+<!-- Navbar component
+<nav style="background-color: #333; padding: 1em; text-align: center;">
+    <button (click)="goToHome()" style="color: white; background-color: transparent; border: none; padding: 10px; cursor: pointer;">Home</button>
+    <button (click)="goToShowData()" style="color: white; background-color: transparent; border: none; padding: 10px; cursor: pointer;">All Cars</button>
+    <button (click)="goToGetCarById()" style="color: white; background-color: transparent; border: none; padding: 10px; cursor: pointer;">Car By Id</button>
+    <button (click)="goToTopNCar()" style="color: white; background-color: transparent; border: none; padding: 10px; cursor: pointer;">Top N Cars</button>
+    <button (click)="goToUpdateCarById()" style="color: white; background-color: transparent; border: none; padding: 10px; cursor: pointer;">Update By Id</button>
+    <button (click)="goToDeleteCarById()" style="color: white; background-color: transparent; border: none; padding: 10px; cursor: pointer;">Delete By Id</button>
+  </nav> -->
+  
+  <!-- Home component -->
+  <nav>
+    <div >
+      <a  routerLink="/home">Car Invantory Management</a>
+          <ul >
+            <a  routerLink="/show-data">Get All Cars</a>
+          </ul>
+          <ul >
+            <a  routerLink="/getcarbyid">Get Car By ID</a>
+          </ul>
+          <ul >
+            <a  routerLink="/deletebyid">Delete Car By ID</a>
+          </ul>
+          <ul>
+            <a routerLink="/top">Get Top N Cars</a>
+          </ul>
+          <ul >
+            <a routerLink="/updatebyid">Update Car</a>
+          </ul>
+    </div>
+  </nav>
+ 
+ 
+  <div >
+    <div >
+      <h1>Hey! Welcome to My Application</h1>
+      <p>Get Each and Every details of Cars...</p>
+      <a style="  background-color: #28a745;
+      " routerLink="/home">Explore All Services</a>
+    </div>
+  </div>
+ 
+ 
+  <div >
+    <div>
+ 
+      <div  id="getAllCars">
+        <div >
+          <div >
+            <h5 >API 1: Get All Car Details</h5>
+            <p >Get detailed information about cars, including model, year, price, and more.</p>
+            <a style="  background-color: #28a745;
+            " routerLink="/show-data">Get All Cars</a>
+          </div>
+        </div>
+      </div>
+ 
+ 
+      <div  id="getCarById">
+        <div >
+          <div>
+            <h5 >API 2: Get Car Details..</h5>
+            <p >Get detailed information about the car by giving the ID number.</p>
+            <a style="  background-color: #28a745;
+                        " routerLink="/getCarById">Show car by Id</a>
+
+          </div>
+        </div>
+      </div>
+ 
+      <div  id="deleteCarById">
+        <div >
+          <div >
+            <h5 >API 3: Delete Car..</h5>
+            <p >For Deleting the car details</p>
+            <a style="  background-color: #28a745;
+                        " routerLink="/deletebyid">Delete car by Id</a>
+
+          </div>
+        </div>
+      </div>
+ 
+ 
+      <div  id="getTopCar">
+        <div >
+          <div>
+            <h5 >API 4: Get Top N Cars..</h5>
+            <p >Provide the details of Top N Cars</p>
+            <a style="  background-color: #28a745;
+                        " routerLink="/top">get Top N car by selling price</a>
+
+          </div>
+        </div>
+      </div>
+ 
+      <div  id="getUpdate">
+        <div >
+          <div>
+            <h5 >API 5: Update Car..</h5>
+            <p >For updating the details of a particular car</p>
+            <a style="  background-color: #28a745;
+                        " routerLink="/updatebyid">Update car data by Id</a>
+
+          </div>
+        </div>
+      </div>
+ 
+    </div>
+  </div>
+ 
+ 
+  <div class="footer">
+    <p>© 2024 Robin Maheshwary. All rights reserved.</p>
+  </div>
+ 
+has context menu
+  
+  
